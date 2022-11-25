@@ -1,0 +1,480 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\WS\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\WS\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\WS\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\WS\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56358742-98DB-4C43-A72B-B3DBA3702D40}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GERENTES</RootNamespace>
+    <AssemblyName>GERENTES</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\WS\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\ie8.css" />
+    <Content Include="assets\css\ie9.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\js\ie\html5shiv.js" />
+    <Content Include="assets\js\ie\respond.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\skel.min.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="frm_cambioContr.aspx" />
+    <Content Include="frm_correo.aspx" />
+    <Content Include="frm_ejecucionManual.aspx" />
+    <Content Include="frm_evento.aspx" />
+    <Content Include="frm_log.aspx" />
+    <Content Include="frm_pronostico.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="NUO.Master" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\sass\base\_page.scss" />
+    <Content Include="assets\sass\base\_typography.scss" />
+    <Content Include="assets\sass\components\_box.scss" />
+    <Content Include="assets\sass\components\_button.scss" />
+    <Content Include="assets\sass\components\_features.scss" />
+    <Content Include="assets\sass\components\_form.scss" />
+    <Content Include="assets\sass\components\_icon.scss" />
+    <Content Include="assets\sass\components\_image.scss" />
+    <Content Include="assets\sass\components\_list.scss" />
+    <Content Include="assets\sass\components\_mini-posts.scss" />
+    <Content Include="assets\sass\components\_posts.scss" />
+    <Content Include="assets\sass\components\_section.scss" />
+    <Content Include="assets\sass\components\_table.scss" />
+    <Content Include="assets\sass\ie8.scss" />
+    <Content Include="assets\sass\ie9.scss" />
+    <Content Include="assets\sass\layout\_banner.scss" />
+    <Content Include="assets\sass\layout\_footer.scss" />
+    <Content Include="assets\sass\layout\_header.scss" />
+    <Content Include="assets\sass\layout\_main.scss" />
+    <Content Include="assets\sass\layout\_menu.scss" />
+    <Content Include="assets\sass\layout\_sidebar.scss" />
+    <Content Include="assets\sass\layout\_wrapper.scss" />
+    <Content Include="assets\sass\libs\_functions.scss" />
+    <Content Include="assets\sass\libs\_mixins.scss" />
+    <Content Include="assets\sass\libs\_skel.scss" />
+    <Content Include="assets\sass\libs\_vars.scss" />
+    <Content Include="assets\sass\main.scss" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="frm_inicio.aspx" />
+    <Content Include="frm_perfilUsuario.aspx" />
+    <Content Include="frm_rol.aspx" />
+    <Content Include="frm_usuario.aspx" />
+    <Content Include="Web References\WS_GERENTES\cl_salida.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WS_GERENTES\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_GERENTES\WS_GERENTES.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\plugins\morris.css" />
+    <Content Include="css\plugins\nuo.css" />
+    <Content Include="css\sb-admin.css" />
+    <Content Include="frm_login.aspx" />
+    <Content Include="images\8bcLQqF.png" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\barra.png" />
+    <Content Include="images\desarrollado.png" />
+    <Content Include="images\fondo.jpg" />
+    <Content Include="images\fondo_web.png" />
+    <Content Include="images\iconos\abajo.png" />
+    <Content Include="images\iconos\accept.png" />
+    <Content Include="images\iconos\add.png" />
+    <Content Include="images\iconos\admin.png" />
+    <Content Include="images\iconos\administrador.png" />
+    <Content Include="images\iconos\alarmaOff.png" />
+    <Content Include="images\iconos\alert.png" />
+    <Content Include="images\iconos\arriba.png" />
+    <Content Include="images\iconos\arribaRojo.png" />
+    <Content Include="images\iconos\asignar.png" />
+    <Content Include="images\iconos\atraso.png" />
+    <Content Include="images\iconos\ayuda.png" />
+    <Content Include="images\iconos\azul.png" />
+    <Content Include="images\iconos\bg.gif" />
+    <Content Include="images\iconos\btn-sprite.gif" />
+    <Content Include="images\iconos\cafe.png" />
+    <Content Include="images\iconos\calculadora.png" />
+    <Content Include="images\iconos\Calendar_schedule.png" />
+    <Content Include="images\iconos\camion.png" />
+    <Content Include="images\iconos\cancelado.png" />
+    <Content Include="images\iconos\cargando.gif" />
+    <Content Include="images\iconos\celeste.png" />
+    <Content Include="images\iconos\cerrar.png" />
+    <Content Include="images\iconos\cerrar2.png" />
+    <Content Include="images\iconos\close.png" />
+    <Content Include="images\iconos\ddn.png" />
+    <Content Include="images\iconos\descargado.png" />
+    <Content Include="images\iconos\dn.png" />
+    <Content Include="images\iconos\dn2.png" />
+    <Content Include="images\iconos\dscarga.png" />
+    <Content Include="images\iconos\editar.gif" />
+    <Content Include="images\iconos\editar.png" />
+    <Content Include="images\iconos\empresa.png" />
+    <Content Include="images\iconos\error.png" />
+    <Content Include="images\iconos\escribir.png" />
+    <Content Include="images\iconos\espacio.png" />
+    <Content Include="images\iconos\espera.png" />
+    <Content Include="images\iconos\excel.png" />
+    <Content Include="images\iconos\fhbg.gif" />
+    <Content Include="images\iconos\first.gif" />
+    <Content Include="images\iconos\geografico.png" />
+    <Content Include="images\iconos\gruposTrabajo.png" />
+    <Content Include="images\iconos\guardar.png" />
+    <Content Include="images\iconos\guia.png" />
+    <Content Include="images\iconos\guia2.png" />
+    <Content Include="images\iconos\hl.png" />
+    <Content Include="images\iconos\icono.png" />
+    <Content Include="images\iconos\imprimir.png" />
+    <Content Include="images\iconos\informacion.png" />
+    <Content Include="images\iconos\informes.jpg" />
+    <Content Include="images\iconos\iz.png" />
+    <Content Include="images\iconos\jda.jpg" />
+    <Content Include="images\iconos\jda.png" />
+    <Content Include="images\iconos\kilometraje.png" />
+    <Content Include="images\iconos\last.gif" />
+    <Content Include="images\iconos\line.gif" />
+    <Content Include="images\iconos\list.bmp" />
+    <Content Include="images\iconos\llegar.png" />
+    <Content Include="images\iconos\load.gif" />
+    <Content Include="images\iconos\load.png" />
+    <Content Include="images\iconos\magnifier.png" />
+    <Content Include="images\iconos\mapa.png" />
+    <Content Include="images\iconos\mensaje.png" />
+    <Content Include="images\iconos\mensaje2.png" />
+    <Content Include="images\iconos\mensaje3.png" />
+    <Content Include="images\iconos\minus.gif" />
+    <Content Include="images\iconos\movil.png" />
+    <Content Include="images\iconos\naranja.png" />
+    <Content Include="images\iconos\new_document.png" />
+    <Content Include="images\iconos\new_page.png" />
+    <Content Include="images\iconos\next.gif" />
+    <Content Include="images\iconos\noDescargado.png" />
+    <Content Include="images\iconos\nuevo.png" />
+    <Content Include="images\iconos\objetivo.png" />
+    <Content Include="images\iconos\paso1.png" />
+    <Content Include="images\iconos\paso1_neg.png" />
+    <Content Include="images\iconos\paso1_sel.png" />
+    <Content Include="images\iconos\paso2.png" />
+    <Content Include="images\iconos\paso2_neg.png" />
+    <Content Include="images\iconos\paso2_sel.png" />
+    <Content Include="images\iconos\paso3.png" />
+    <Content Include="images\iconos\paso3_neg.png" />
+    <Content Include="images\iconos\paso3_sel.png" />
+    <Content Include="images\iconos\pastel.png" />
+    <Content Include="images\iconos\plus.gif" />
+    <Content Include="images\iconos\prev.gif" />
+    <Content Include="images\iconos\proceder.png" />
+    <Content Include="images\iconos\produc.png" />
+    <Content Include="images\iconos\puertaClos.png" />
+    <Content Include="images\iconos\puertaOpen.png" />
+    <Content Include="images\iconos\regresar.png" />
+    <Content Include="images\iconos\revisar.png" />
+    <Content Include="images\iconos\rojo.png" />
+    <Content Include="images\iconos\sap.png" />
+    <Content Include="images\iconos\tonelaje.png" />
+    <Content Include="images\iconos\up.png" />
+    <Content Include="images\iconos\user.png" />
+    <Content Include="images\iconos\uup.png" />
+    <Content Include="images\iconos\verde.png" />
+    <Content Include="images\iconos\violeta.png" />
+    <Content Include="images\iconos\wbg.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logoCel.png" />
+    <Content Include="images\logoNuo.png" />
+    <Content Include="images\logo_nuo.png" />
+    <Content Include="images\logo_orig.jpg" />
+    <Content Include="images\logo_reloj.png" />
+    <Content Include="images\publicidad.jpg" />
+    <Content Include="images\resources\bt_aba.jpg" />
+    <Content Include="images\resources\bt_arr.jpg" />
+    <Content Include="images\resources\bt_ayuda.png" />
+    <Content Include="images\resources\bt_ayuda_s.png" />
+    <Content Include="images\resources\bt_cierra.jpg" />
+    <Content Include="images\resources\bt_der.jpg" />
+    <Content Include="images\resources\bt_izq.jpg" />
+    <Content Include="images\resources\bt_mover.jpg" />
+    <Content Include="images\resources\bt_sig.jpg" />
+    <Content Include="images\resources\cr.ico" />
+    <Content Include="images\resources\cr.png" />
+    <Content Include="images\resources\d_nuo.gif" />
+    <Content Include="images\resources\d_nuo_p.gif" />
+    <Content Include="images\resources\flecha_der.jpg" />
+    <Content Include="images\resources\flecha_der_s.jpg" />
+    <Content Include="images\resources\flecha_izq.jpg" />
+    <Content Include="images\resources\flecha_izq_s.jpg" />
+    <Content Include="images\resources\fnd_boton.jpg" />
+    <Content Include="images\resources\fnd_cab_menu.jpg" />
+    <Content Include="images\resources\fnd_det_menu.jpg" />
+    <Content Include="images\resources\fnd_espacio.jpg" />
+    <Content Include="images\resources\fnd_linea.jpg" />
+    <Content Include="images\resources\fnd_titulo.jpg" />
+    <Content Include="images\resources\fondo.png" />
+    <Content Include="images\resources\fondo_01.png" />
+    <Content Include="images\resources\fondo_barras.png" />
+    <Content Include="images\resources\fondo_CR.png" />
+    <Content Include="images\resources\ico_carpeta.jpg" />
+    <Content Include="images\resources\ico_documento.jpg" />
+    <Content Include="images\resources\layout1.css" />
+    <Content Include="images\resources\linea.png" />
+    <Content Include="images\resources\login - Copy.png" />
+    <Content Include="images\resources\login.png" />
+    <Content Include="images\resources\logo.ico" />
+    <Content Include="images\resources\logo.png" />
+    <Content Include="images\resources\logo_CR_p.png" />
+    <Content Include="images\resources\logo_emp_m.png" />
+    <Content Include="images\resources\styleMenu.css" />
+    <Content Include="images\resources\stylesheet.css" />
+    <Content Include="images\resources\styleSubMenu.css" />
+    <Content Include="js\jquery.js" />
+    <None Include="Web References\WS_GERENTES\WS_GERENTES.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_cambioContr.aspx.cs">
+      <DependentUpon>frm_cambioContr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_cambioContr.aspx.designer.cs">
+      <DependentUpon>frm_cambioContr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_correo.aspx.cs">
+      <DependentUpon>frm_correo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_correo.aspx.designer.cs">
+      <DependentUpon>frm_correo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ejecucionManual.aspx.cs">
+      <DependentUpon>frm_ejecucionManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_ejecucionManual.aspx.designer.cs">
+      <DependentUpon>frm_ejecucionManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_evento.aspx.cs">
+      <DependentUpon>frm_evento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_evento.aspx.designer.cs">
+      <DependentUpon>frm_evento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_inicio.aspx.cs">
+      <DependentUpon>frm_inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_inicio.aspx.designer.cs">
+      <DependentUpon>frm_inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_log.aspx.cs">
+      <DependentUpon>frm_log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_log.aspx.designer.cs">
+      <DependentUpon>frm_log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.aspx.cs">
+      <DependentUpon>frm_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_login.aspx.designer.cs">
+      <DependentUpon>frm_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_perfilUsuario.aspx.cs">
+      <DependentUpon>frm_perfilUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_perfilUsuario.aspx.designer.cs">
+      <DependentUpon>frm_perfilUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pronostico.aspx.cs">
+      <DependentUpon>frm_pronostico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_pronostico.aspx.designer.cs">
+      <DependentUpon>frm_pronostico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_rol.aspx.cs">
+      <DependentUpon>frm_rol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_rol.aspx.designer.cs">
+      <DependentUpon>frm_rol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_usuario.aspx.cs">
+      <DependentUpon>frm_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_usuario.aspx.designer.cs">
+      <DependentUpon>frm_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NUO.Master.cs">
+      <DependentUpon>NUO.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NUO.Master.designer.cs">
+      <DependentUpon>NUO.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_GERENTES\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:53160/WS_GERENTES.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_GERENTES\</RelPath>
+      <UpdateFromURL>http://localhost:53160/WS_GERENTES.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GERENTES_WS_GERENTES_WS_GERENTES</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64693/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\WS\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\WS\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\WS\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\WS\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

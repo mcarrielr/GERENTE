@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///C:/Users/luis.pita/FileZilla/El Rosado/WSDL PO PRD/Gerentes/WS_PO_PEDIDO_PEN_SAP.xml" filename="SI_OrdenesPendientes_OUT_SYNC.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

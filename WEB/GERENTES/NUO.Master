@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NUO.master.cs" Inherits="GERENTES.NUO" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head runat="server">
+		<title>SCC - GERENTES</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link href="css/plugins/nuo.css" rel="stylesheet" />
+        <script src="js/jquery.js"></script>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <script>
+            function validationFunction(source, args) {
+                if (args.Value == ".::SELECCIONAR::." || args.Value == "" || args.Value == "0") {
+                    args.IsValid = false;
+                } else {
+                    args.IsValid = true;
+                }
+            }
+
+            function myFunction(mensaje, caso) {
+                // Get the snackbar DIV
+                if (caso == "VR") {
+                    var x = document.getElementById("snackbar-verde");
+                    document.getElementById("snackbar-verde").textContent = mensaje;
+                }
+                else {
+                    if (caso == "RJ") {
+                        
+                        var x = document.getElementById("snackbar-rojo");
+                        document.getElementById("snackbar-rojo").textContent = mensaje;
+                    }
+                    else {
+                        if (caso == "NG") {
+                            var x = document.getElementById("snackbar-negro");
+                            document.getElementById("snackbar-negro").textContent = mensaje;
+                        }
+                        else {
+                            if (caso == "AZ") {
+                                var x = document.getElementById("snackbar-azul");
+                                document.getElementById("snackbar-azul").textContent = mensaje;
+                            }
+                        }
+                    }
+                }
+                // Add the "show" class to DIV
+                x.className = "show";
+
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
+            }
+        </script>
+	 
+	</head>
+	<body>
+        <form runat="server">
+            <div id="snackbar-verde"></div>
+            <div id="snackbar-negro"></div>
+            <div id="snackbar-rojo"></div>
+            <div id="snackbar-azul"></div>
+        <cc1:ToolkitScriptManager ID="ToolkitScriptManager2" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true">
+    </cc1:ToolkitScriptManager>
+              <asp:UpdatePanel ID="UpdatePanel1" runat="server"> 
+        <ContentTemplate>
+            <center><img  src="images/banner.png" width="100%"  alt="jQuery Mobile"></center>
+            </ContentTemplate></asp:UpdatePanel>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+							<!-- Content -->
+    </asp:ContentPlaceHolder>  
+							<!-- Header -->
+								
+								
+					
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+							
+                            <%--<img  src="images/logo.jpg" width="100%"  alt="jQuery Mobile">--%>
+							<!-- Menu -->
+								<asp:Panel ID="pn_menu" runat="server">
+								
+                                 </asp:Panel>
+							
+								<footer id="footer">
+									<p class="copyright">&copy; Desarrollado por: <a href="https://nuo.com.ec">SCC</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+        </form>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

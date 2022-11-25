@@ -1,0 +1,352 @@
+﻿.close {
+    float: right;
+    
+}
+
+.alert {
+    -webkit-box-shadow: -5px 0px 41px -6px rgba(0,0,0,0.54);
+    -moz-box-shadow: -5px 0px 41px -6px rgba(0,0,0,0.54);
+    box-shadow: -5px 0px 41px -6px rgba(0,0,0,0.54);
+    border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border: 0px solid #000000;
+    width: 100%;
+    height: 45px;
+    padding: 10px 30px 55px 10px;
+}
+.alert-warning hr {
+    border-top-color: #f7e1b5
+}
+
+.alert-warning .alert-link {
+    color: #66512c
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1
+}
+
+    .alert-danger hr {
+        border-top-color: #e4b9c0
+    }
+
+    .alert-danger .alert-link {
+        color: #843534
+    }
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6
+}
+
+    .alert-success hr {
+        border-top-color: #c9e2b3
+    }
+
+    .alert-success .alert-link {
+        color: #2b542c
+    }
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1
+}
+
+    .alert-info hr {
+        border-top-color: #a6e1ec
+    }
+
+    .alert-info .alert-link {
+        color: #245269
+    }
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc
+}
+
+    .alert-warning hr {
+        border-top-color: #f7e1b5
+    }
+
+    .alert-warning .alert-link {
+        color: #66512c
+    }
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1
+}
+
+    .alert-danger hr {
+        border-top-color: #e4b9c0
+    }
+
+    .alert-danger .alert-link {
+        color: #843534
+    }
+ 
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.estilo4{ 
+font-family:Helvetica;font-size: 12px;color:Red;padding-left:1px; border-color:transparent;
+}
+.img_menu
+{
+	width:100%;
+	}
+
+.jqm-demos .jqm-header {
+    display: block;
+    background-color: #F9F9F9;
+    /*background: -moz-linear-gradient(top, rgba(118,189,29,1) 0%, rgba(118,189,29,0) 48%, rgba(118,189,29,0) 69%); /* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(118,189,29,1)), color-stop(48%,rgba(118,189,29,0)), color-stop(69%,rgba(118,189,29,0))); /* Chrome,Safari4+ */
+    /*background: -webkit-linear-gradient(top, rgba(118,189,29,1) 0%,rgba(118,189,29,0) 48%,rgba(118,189,29,0) 69%); /* Chrome10+,Safari5.1+ */
+    /*background: -o-linear-gradient(top, rgba(118,189,29,1) 0%,rgba(118,189,29,0) 48%,rgba(118,189,29,0) 69%); /* Opera 11.10+ */
+    /*background: -ms-linear-gradient(top, rgba(118,189,29,1) 0%,rgba(118,189,29,0) 48%,rgba(118,189,29,0) 69%); /* IE10+ */
+    /*background: linear-gradient(to bottom, rgba(118,189,29,1) 0%,rgba(118,189,29,0) 48%,rgba(118,189,29,0) 69%); /* W3C */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76bd1d', endColorstr='#0076bd1d',GradientType=0 ); /* IE6-9 */
+    width: 100%;
+    height: 100%;
+}
+.espacio {
+    height: 1px;
+}
+.grid_cabecera {
+    border-color: transparent;
+    border-style: Solid;
+    font-family: Helvetica;
+    font-size: 12px;
+    background-color: #110B38;
+    color: White;
+    text-align: center;
+}
+.grid_interno
+{
+    font-family:Helvetica;
+    font-size: 12px;
+    text-align:center;
+    border-color:#EAEAEA;
+    border-width:2px;
+    border-style: solid;
+    color: Black;
+    width:100%;
+}
+.grid_internoPop {
+    font-family: Helvetica;
+    font-size: 12px;
+    text-align: center;
+    border-color: #EAEAEA;
+    border-width: 2px;
+    border-style: solid;
+    color: Black;
+    width: 80%;
+}
+.grid_pie
+{
+    border-color:#DFDFDF;
+	border-style:Solid;
+    font-family:Helvetica;
+    font-size: 12px;
+    background-color:#DFDFDF;
+	
+}
+.mensajePop {
+    width: 700px;
+    background: #3F4B59;
+    border-radius: 0.5em;
+    color: #fff;
+}
+.mensaje 
+{
+    width:350px;
+    background:#3F4B59;
+    border-radius:0.5em;
+	color:#fff;
+}
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+input[type=Label] {
+    font-family: Helvetica;
+    font-size: 48px;
+    color: Red;
+    padding-left: 1px;
+    border-color: transparent;
+}
+.titulo {
+    background-color: #33363B;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: White;
+    top: 50;
+}
+
+.table-border {
+    border-collapse: separate;
+    border: solid #ccc 1px;
+    border-radius: 25px;
+    border-collapse: separate;
+    border-spacing: 1px 1px;
+}
+#snackbar-negro {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    font-family: Arial;
+    font-size: 18px;
+    font: bold;
+}
+
+#snackbar-verde {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #DFF0D8; /* Black background color */
+    color: #000; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    font-family: Arial;
+    font-size: 18px;
+    font: bold;
+}
+#snackbar-rojo {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #F2DEDE; /* Black background color */
+    color: #000000; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    font-family: Arial;
+    font-size: 18px;
+    font: bold;
+}
+#snackbar-azul {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #DCD7EF; /* Black background color */
+    color: #000000; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    font-family: Arial;
+    font-size: 18px;
+    font: bold;
+}
+    /* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar-verde.show, #snackbar-negro.show, #snackbar-rojo.show, #snackbar-azul.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+} 
+@media screen and (max-width: 800px) 
+{
+	.estilo4{ font-size: 18px;
+}
+
+.grid_cabecera
+{
+    font-size: 8px;
+}
+.grid_interno
+{
+    font-size: 8px;
+}
+
+.grid_pie
+{
+    font-size: 8px;
+	
+}
+}

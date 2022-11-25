@@ -1,0 +1,10 @@
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\bin\IntegracionRosado.dll.config
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\bin\IntegracionRosado.dll
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\bin\IntegracionRosado.pdb
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\obj\Debug\IntegracionRosado.csproj.AssemblyReference.cache
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\obj\Debug\IntegracionRosado.csproj.CoreCompileInputs.cache
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\obj\Debug\IntegracionRosado.csproj.CopyComplete
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\obj\Debug\IntegracionRosado.dll
+D:\ProyectosVarios\Rosado\CodigoSeguro\rosado-gerentes-fe\WS\IntegracionRosado\obj\Debug\IntegracionRosado.pdb

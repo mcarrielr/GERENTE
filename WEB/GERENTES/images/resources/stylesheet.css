@@ -1,0 +1,82 @@
+/*
+ * After modifying this style sheet, refresh the page being designed to see the effect of the modification.
+ * Click the Refresh button in the Visual Designer toolbar to refresh the page.
+ */ 
+
+/* Style rules to make Java Server faces Standarad data tables look better */
+
+.list-header {
+  background-color: #eeeeee;
+  font-size: larger;
+  font-weight: bold;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+.list-paging-header {
+  background-color: white;
+}
+
+.list-paging-footer {
+  background-color: white;
+}
+
+.list-row-even { 
+}
+
+.list-row-odd { 
+  background-color: #eeeeee;
+}
+
+/* Style rules for message severity levels */
+
+.infoMessage {
+  color: black;
+}
+
+.warnMessage {
+  color: orange;
+  font-weight: bold;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+}
+
+.fatalMessage {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+table.Tbl_sun4 caption.TblTtlTxt_sun4 {
+    color: #1D1D1D;
+    background-color: #FBF076;
+    background-image: url(fondo_01.png);
+    background-position: top;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/*table.Tbl_sun4 colgroup.TblTtlTxt_sun4 {
+    color: #1D1D1D;
+    background-color: #E5E9ED;
+    background-image: url(fondo_01.png);
+    background-position: top;
+    font-size: 15px;
+    font-weight: 400;
+}*/
+
+body {
+    font-size: 13px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+html {
+    background-color: #E8E9EA;
+    background-image: url(fondo_barras.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+}
+

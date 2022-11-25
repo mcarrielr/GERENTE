@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:elrosado.com:jda:asr:OrdenesPendientes" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_OrdenesPendientes_OUT_SYNC" targetNamespace="urn:elrosado.com:jda:asr:OrdenesPendientes" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_OrdenesPendientes_OUT_SYNC" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:elrosado.com:jda:asr:OrdenesPendientes" targetNamespace="urn:elrosado.com:jda:asr:OrdenesPendientes" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_OrdenesPendientes_Request" type="p1:DT_OrdenesPendientes_Request" />
+      <xsd:element name="MT_OrdenesPendientes_Response" type="p1:DT_OrdenesPendientes_Response" />
+      <xsd:complexType name="DT_OrdenesPendientes_Request">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">6f7cd3c2138911e9c949000000141f5f</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="IT_BEDAT">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8671d33c136311e981bf8c16452c2957</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">786fc9e5138911e9994d8c16452c2957</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="BEDAT" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="IT_MATNR">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8671d33e136311e9cb218c16452c2957</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">786fc9e6138911e98e868c16452c2957</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="MATNR" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="IT_WERKS">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8671d340136311e981408c16452c2957</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">786fc9e7138911e984958c16452c2957</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="WERKS" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_OrdenesPendientes_Response">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">5adde1eb136711e9bfa5000000141f5e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="T_OC_PENDIENTE">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">aada0190c8ea11e898c98c16452c2957</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">aada018fc8ea11e8b9c38c16452c2957</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="EBELN" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aad9dfebc8ea11e8bb6a8c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="EBELP" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018bc8ea11e888228c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="MATNR" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018cc8ea11e89cf58c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="EINDT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018dc8ea11e8c1228c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="MENGE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018ec8ea11e8b3198c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_OrdenesPendientes_Request">
+    <wsdl:documentation />
+    <wsdl:part name="MT_OrdenesPendientes_Request" element="p1:MT_OrdenesPendientes_Request" />
+  </wsdl:message>
+  <wsdl:message name="MT_OrdenesPendientes_Response">
+    <wsdl:documentation />
+    <wsdl:part name="MT_OrdenesPendientes_Response" element="p1:MT_OrdenesPendientes_Response" />
+  </wsdl:message>
+  <wsdl:portType name="SI_OrdenesPendientes_OUT_SYNC">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_OrdenesPendientes_OUT_SYNC">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_OrdenesPendientes_OUT_SYNC" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_OrdenesPendientes_Request" />
+      <wsdl:output message="p1:MT_OrdenesPendientes_Response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_OrdenesPendientes_OUT_SYNCBinding" type="p1:SI_OrdenesPendientes_OUT_SYNC">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_OrdenesPendientes_OUT_SYNC">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_OrdenesPendientes_OUT_SYNCService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_OrdenesPendientes_OUT_SYNCBinding">
+      <address location="http://vhcerpipci.hec.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OrdenesPendientes_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3AOrdenesPendientes" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_OrdenesPendientes_OUT_SYNCBinding">
+      <address location="https://vhcerpipci.hec.elrosado.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OrdenesPendientes_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3AOrdenesPendientes" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IntegracionRosado.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IntegracionRosado_WS_CENTRO_SI_Centro_OUT_SYNCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://piqas.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_KIOSKO_TIENDA_PIQ&amp;receiverParty=&amp;receiverService=&amp;interface=SI_Centro_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Anuo%3AkioskoTienda%3Acentro</Value>
+    </Setting>
+    <Setting Name="IntegracionRosado_WS_PROMOCION_SAP_SI_PromocionxArticulo_OUT_SYNCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://piqas.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIQ&amp;receiverParty=&amp;receiverService=&amp;interface=SI_PromocionxArticulo_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3APromocionxArticulo</Value>
+    </Setting>
+    <Setting Name="IntegracionRosado_WS_PEDIDO_PEN_SAP_SI_OrdenesPendientes_OUT_SYNCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://piprd.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OrdenesPendientes_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3AOrdenesPendientes</Value>
+    </Setting>
+    <Setting Name="IntegracionRosado_WS_PO_PEDIDO_PEN_SAP_SI_OrdenesPendientes_OUT_SYNCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vhcerpipci.hec.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_OrdenesPendientes_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3AOrdenesPendientes</Value>
+    </Setting>
+    <Setting Name="IntegracionRosado_WS_PO_PROMOCION_SAP_SI_PromocionxArticulo_OUT_SYNCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vhcerpipci.hec.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_PromocionxArticulo_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3APromocionxArticulo</Value>
+    </Setting>
+    <Setting Name="IntegracionRosado_WS_PO_CENTROS_SI_Centro_OUT_SYNCService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vhcerpipci.hec.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_KIOSKO_TIENDA_PIP&amp;receiverParty=&amp;receiverService=&amp;interface=SI_Centro_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Anuo%3AkioskoTienda%3Acentro</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

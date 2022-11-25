@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:elrosado.com:jda:asr:PromocionxArticulo" name="SI_PromocionxArticulo_OUT_SYNC" targetNamespace="urn:elrosado.com:jda:asr:PromocionxArticulo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_PromocionxArticulo_OUT_SYNC" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:elrosado.com:jda:asr:PromocionxArticulo" targetNamespace="urn:elrosado.com:jda:asr:PromocionxArticulo" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_PromocionxArticulo_Response" type="p1:DT_PromocionxArticulo_Response" />
+      <xsd:element name="MT_PromocionxArticulo_Request" type="p1:DT_PromocionxArticulo_Request" />
+      <xsd:complexType name="DT_PromocionxArticulo_Request">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">f3938291c8e911e89f21000000141f5e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="IT_PXITEM">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="item" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_PromocionxArticulo_Response">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">048554cdc8ea11e8994d000000141f5e</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="T_OUTPUT">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">aada0190c8ea11e898c98c16452c2957</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">aada018fc8ea11e8b9c38c16452c2957</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="PXITEM" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aad9dfebc8ea11e8bb6a8c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="PXBDAT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018bc8ea11e888228c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="PXEDAT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018cc8ea11e89cf58c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="WAKTION" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018dc8ea11e8c1228c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="AKTKT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">aada018ec8ea11e8b3198c16452c2957</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_PromocionxArticulo_Request">
+    <wsdl:documentation />
+    <wsdl:part name="MT_PromocionxArticulo_Request" element="p1:MT_PromocionxArticulo_Request" />
+  </wsdl:message>
+  <wsdl:message name="MT_PromocionxArticulo_Response">
+    <wsdl:documentation />
+    <wsdl:part name="MT_PromocionxArticulo_Response" element="p1:MT_PromocionxArticulo_Response" />
+  </wsdl:message>
+  <wsdl:portType name="SI_PromocionxArticulo_OUT_SYNC">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_PromocionxArticulo_OUT_SYNC">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_PromocionxArticulo_OUT_SYNC" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_PromocionxArticulo_Request" />
+      <wsdl:output message="p1:MT_PromocionxArticulo_Response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_PromocionxArticulo_OUT_SYNCBinding" type="p1:SI_PromocionxArticulo_OUT_SYNC">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_PromocionxArticulo_OUT_SYNC">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_PromocionxArticulo_OUT_SYNCService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_PromocionxArticulo_OUT_SYNCBinding">
+      <address location="http://piqas.elrosado.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIQ&amp;receiverParty=&amp;receiverService=&amp;interface=SI_PromocionxArticulo_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3APromocionxArticulo" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_PromocionxArticulo_OUT_SYNCBinding">
+      <address location="https://piqas.elrosado.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_JDA_ASR_PIQ&amp;receiverParty=&amp;receiverService=&amp;interface=SI_PromocionxArticulo_OUT_SYNC&amp;interfaceNamespace=urn%3Aelrosado.com%3Ajda%3Aasr%3APromocionxArticulo" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

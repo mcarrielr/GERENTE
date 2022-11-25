@@ -1,0 +1,40 @@
+/* 
+    Document   : styleMenu
+    Created on : 08/10/2010, 09:05:31 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body {
+	font: Verdana, Geneva, sans-serif;
+}
+
+td{
+    border-left: groove;
+	border-left-color: #94A5B5;
+    cursor: pointer;
+	text-align:center;
+	font: Verdana, Geneva, sans-serif;
+	border-bottom:hidden;
+	font-weight:550;
+	color:#303030;
+	font-family:Verdana, Geneva, sans-serif;
+	text-decoration:none;
+}
+
+a {
+	color:#5B6F7D;
+	font-family:Verdana, Geneva, sans-serif;
+	text-decoration:none;
+}
+

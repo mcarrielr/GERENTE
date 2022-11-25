@@ -1,0 +1,2332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/WS_GERENTES" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/WS_GERENTES" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/WS_GERENTES">
+      <s:element name="slt_val_Contrasenia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONTRA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_val_ContraseniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_val_ContraseniaResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="cl_salida">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="adt_datos">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="adt_datos2">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="adt_datos3">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="adt_datos4">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="1" maxOccurs="1" name="ai_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="as_error" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="as_retorno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ai_num_error" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="as_num_pda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="as_fechaExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="as_fechaPro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="as_valVentas" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="slt_gn_log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FECHA_INI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FECHA_FIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_logResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_gn_logResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_sociedad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_SOC" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_sociedadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_gn_sociedadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_cen_tienda_X_sociedad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_SOC" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_cen_tienda_X_sociedadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_cen_tienda_X_sociedadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_si_correo">
+        <s:complexType />
+      </s:element>
+      <s:element name="slt_si_correoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_si_correoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_evento">
+        <s:complexType />
+      </s:element>
+      <s:element name="slt_gn_eventoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_gn_eventoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_centro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_centroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_gn_centroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_si_perfil_usuario">
+        <s:complexType />
+      </s:element>
+      <s:element name="slt_si_perfil_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_si_perfil_usuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_si_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBRE_USR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_si_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_si_usuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_logeo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ALIAS_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CLAVE_USR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_logeoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_logeoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_pagina_x_grupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_pagina_x_grupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_pagina_x_grupoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_si_rol">
+        <s:complexType />
+      </s:element>
+      <s:element name="slt_si_rolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_si_rolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_pagina_x_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GRUPO_PAG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_pagina_x_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_pagina_x_usuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_usr_tnd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_TND" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_usr_tndResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_usr_tndResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_correo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_COR" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CORREO_COR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_correoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upd_si_correoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_correo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CORREO_COR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_correoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_si_correoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_gn_evento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_EVE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_gn_eventoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_gn_eventoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_gn_evento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_EVE" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_EVE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_gn_eventoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upd_gn_eventoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_rol_usu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_ROL" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_rol_usuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_si_rol_usuResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_menu_rol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_ROL" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PAG" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_menu_rolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_si_menu_rolResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBRE_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APELLIDO_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ALIAS_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CLAVE_USR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PUS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_si_usuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_contra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CLAVE_USR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_contraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="upd_contraResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBRE_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APELLIDO_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ALIAS_USR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CLAVE_USR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PUS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RENOV_CLAVE_USR" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upd_si_usuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_gn_log">
+        <s:complexType />
+      </s:element>
+      <s:element name="dlt_gn_logResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dlt_gn_logResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_usr_tnd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_TND" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_usr_tndResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dlt_usr_tndResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_si_rol_usu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_ROL" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_si_rol_usuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dlt_si_rol_usuResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_si_menu_rol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_ROL" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PAG" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_si_menu_rolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dlt_si_menu_rolResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rolUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rolUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rolUsuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tiendaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tiendaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tiendaUsuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rolPagina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_ROL" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rolPaginaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rolPaginaResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_rol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_ROL" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_ROL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_rolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upd_si_rolResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_rol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_ROL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_rolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_si_rolResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_perfil_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_PUS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_si_perfil_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_si_perfil_usuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gn_sociedad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_SOC" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_SOC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="INSERT" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gn_sociedadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gn_sociedadResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gn_centro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_SOC" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_CEN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="INSERT" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gn_centroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gn_centroResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_perfil_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PUS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION_PUS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_si_perfil_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upd_si_perfil_usuarioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sap_consultaPedPendiente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CENTRO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MATERIAL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sap_consultaPedPendienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sap_consultaPedPendienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_promocion_sap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_PRD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_promocion_sapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_promocion_sapResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_centros_sap">
+        <s:complexType />
+      </s:element>
+      <s:element name="slt_centros_sapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_centros_sapResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_validaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ALIAS_USR" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_validaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="slt_validaUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_pronostico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CODIGO_CEN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CAMPO89" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CAMPO1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="slt_gn_pronosticoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slt_gn_pronosticoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_gn_log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="METODO_LOG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PARAMETROS_LOG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int_gn_logResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_gn_logResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_gn_log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_LOG" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ERROR_LOG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_gn_logResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="upd_gn_logResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_si_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_USR" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dlt_si_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dlt_si_usuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_gn_parametro_upd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PUD" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_gn_parametro_updResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="upd_gn_parametro_updResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaArchivo">
+        <s:complexType />
+      </s:element>
+      <s:element name="fn_cargaArchivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fn_cargaArchivoResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaAcrchivo_extractor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FECHA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaAcrchivo_extractorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fn_cargaAcrchivo_extractorResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaAcrchivo_proyeccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FECHA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaAcrchivo_proyeccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fn_cargaAcrchivo_proyeccionResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaAcrchivo_ventas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FECHA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_cargaAcrchivo_ventasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fn_cargaAcrchivo_ventasResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_ejectaDemonio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fn_ejectaDemonioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fn_ejectaDemonioResult" type="tns:cl_salida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DigitoVerificadorEAN13">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoEAN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DigitoVerificadorEAN13Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DigitoVerificadorEAN13Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="slt_val_ContraseniaSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_val_Contrasenia" />
+  </wsdl:message>
+  <wsdl:message name="slt_val_ContraseniaSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_val_ContraseniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_logSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_gn_log" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_logSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_gn_logResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_sociedadSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_gn_sociedad" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_sociedadSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_gn_sociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_cen_tienda_X_sociedadSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_cen_tienda_X_sociedad" />
+  </wsdl:message>
+  <wsdl:message name="slt_cen_tienda_X_sociedadSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_cen_tienda_X_sociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_correoSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_si_correo" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_correoSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_si_correoResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_eventoSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_gn_evento" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_eventoSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_gn_eventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_centroSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_gn_centro" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_centroSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_gn_centroResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_perfil_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_si_perfil_usuario" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_perfil_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_si_perfil_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_si_usuario" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_si_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_logeoSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_logeo" />
+  </wsdl:message>
+  <wsdl:message name="slt_logeoSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_logeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_pagina_x_grupoSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_pagina_x_grupo" />
+  </wsdl:message>
+  <wsdl:message name="slt_pagina_x_grupoSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_pagina_x_grupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_rolSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_si_rol" />
+  </wsdl:message>
+  <wsdl:message name="slt_si_rolSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_si_rolResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_pagina_x_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_pagina_x_usuario" />
+  </wsdl:message>
+  <wsdl:message name="slt_pagina_x_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_pagina_x_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_usr_tndSoapIn">
+    <wsdl:part name="parameters" element="tns:int_usr_tnd" />
+  </wsdl:message>
+  <wsdl:message name="int_usr_tndSoapOut">
+    <wsdl:part name="parameters" element="tns:int_usr_tndResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_correoSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_si_correo" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_correoSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_si_correoResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_si_correoSoapIn">
+    <wsdl:part name="parameters" element="tns:int_si_correo" />
+  </wsdl:message>
+  <wsdl:message name="int_si_correoSoapOut">
+    <wsdl:part name="parameters" element="tns:int_si_correoResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_gn_eventoSoapIn">
+    <wsdl:part name="parameters" element="tns:int_gn_evento" />
+  </wsdl:message>
+  <wsdl:message name="int_gn_eventoSoapOut">
+    <wsdl:part name="parameters" element="tns:int_gn_eventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_gn_eventoSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_gn_evento" />
+  </wsdl:message>
+  <wsdl:message name="upd_gn_eventoSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_gn_eventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_si_rol_usuSoapIn">
+    <wsdl:part name="parameters" element="tns:int_si_rol_usu" />
+  </wsdl:message>
+  <wsdl:message name="int_si_rol_usuSoapOut">
+    <wsdl:part name="parameters" element="tns:int_si_rol_usuResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_si_menu_rolSoapIn">
+    <wsdl:part name="parameters" element="tns:int_si_menu_rol" />
+  </wsdl:message>
+  <wsdl:message name="int_si_menu_rolSoapOut">
+    <wsdl:part name="parameters" element="tns:int_si_menu_rolResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_si_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:int_si_usuario" />
+  </wsdl:message>
+  <wsdl:message name="int_si_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:int_si_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_contraSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_contra" />
+  </wsdl:message>
+  <wsdl:message name="upd_contraSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_contraResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_si_usuario" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_si_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="dlt_gn_logSoapIn">
+    <wsdl:part name="parameters" element="tns:dlt_gn_log" />
+  </wsdl:message>
+  <wsdl:message name="dlt_gn_logSoapOut">
+    <wsdl:part name="parameters" element="tns:dlt_gn_logResponse" />
+  </wsdl:message>
+  <wsdl:message name="dlt_usr_tndSoapIn">
+    <wsdl:part name="parameters" element="tns:dlt_usr_tnd" />
+  </wsdl:message>
+  <wsdl:message name="dlt_usr_tndSoapOut">
+    <wsdl:part name="parameters" element="tns:dlt_usr_tndResponse" />
+  </wsdl:message>
+  <wsdl:message name="dlt_si_rol_usuSoapIn">
+    <wsdl:part name="parameters" element="tns:dlt_si_rol_usu" />
+  </wsdl:message>
+  <wsdl:message name="dlt_si_rol_usuSoapOut">
+    <wsdl:part name="parameters" element="tns:dlt_si_rol_usuResponse" />
+  </wsdl:message>
+  <wsdl:message name="dlt_si_menu_rolSoapIn">
+    <wsdl:part name="parameters" element="tns:dlt_si_menu_rol" />
+  </wsdl:message>
+  <wsdl:message name="dlt_si_menu_rolSoapOut">
+    <wsdl:part name="parameters" element="tns:dlt_si_menu_rolResponse" />
+  </wsdl:message>
+  <wsdl:message name="rolUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:rolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="rolUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:rolUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="tiendaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:tiendaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="tiendaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:tiendaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="rolPaginaSoapIn">
+    <wsdl:part name="parameters" element="tns:rolPagina" />
+  </wsdl:message>
+  <wsdl:message name="rolPaginaSoapOut">
+    <wsdl:part name="parameters" element="tns:rolPaginaResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_rolSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_si_rol" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_rolSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_si_rolResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_si_rolSoapIn">
+    <wsdl:part name="parameters" element="tns:int_si_rol" />
+  </wsdl:message>
+  <wsdl:message name="int_si_rolSoapOut">
+    <wsdl:part name="parameters" element="tns:int_si_rolResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_si_perfil_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:int_si_perfil_usuario" />
+  </wsdl:message>
+  <wsdl:message name="int_si_perfil_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:int_si_perfil_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="gn_sociedadSoapIn">
+    <wsdl:part name="parameters" element="tns:gn_sociedad" />
+  </wsdl:message>
+  <wsdl:message name="gn_sociedadSoapOut">
+    <wsdl:part name="parameters" element="tns:gn_sociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="gn_centroSoapIn">
+    <wsdl:part name="parameters" element="tns:gn_centro" />
+  </wsdl:message>
+  <wsdl:message name="gn_centroSoapOut">
+    <wsdl:part name="parameters" element="tns:gn_centroResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_perfil_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_si_perfil_usuario" />
+  </wsdl:message>
+  <wsdl:message name="upd_si_perfil_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_si_perfil_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="sap_consultaPedPendienteSoapIn">
+    <wsdl:part name="parameters" element="tns:sap_consultaPedPendiente" />
+  </wsdl:message>
+  <wsdl:message name="sap_consultaPedPendienteSoapOut">
+    <wsdl:part name="parameters" element="tns:sap_consultaPedPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_promocion_sapSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_promocion_sap" />
+  </wsdl:message>
+  <wsdl:message name="slt_promocion_sapSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_promocion_sapResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_centros_sapSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_centros_sap" />
+  </wsdl:message>
+  <wsdl:message name="slt_centros_sapSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_centros_sapResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_validaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_validaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="slt_validaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_validaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_pronosticoSoapIn">
+    <wsdl:part name="parameters" element="tns:slt_gn_pronostico" />
+  </wsdl:message>
+  <wsdl:message name="slt_gn_pronosticoSoapOut">
+    <wsdl:part name="parameters" element="tns:slt_gn_pronosticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="int_gn_logSoapIn">
+    <wsdl:part name="parameters" element="tns:int_gn_log" />
+  </wsdl:message>
+  <wsdl:message name="int_gn_logSoapOut">
+    <wsdl:part name="parameters" element="tns:int_gn_logResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_gn_logSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_gn_log" />
+  </wsdl:message>
+  <wsdl:message name="upd_gn_logSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_gn_logResponse" />
+  </wsdl:message>
+  <wsdl:message name="dlt_si_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:dlt_si_usuario" />
+  </wsdl:message>
+  <wsdl:message name="dlt_si_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:dlt_si_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_gn_parametro_updSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_gn_parametro_upd" />
+  </wsdl:message>
+  <wsdl:message name="upd_gn_parametro_updSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_gn_parametro_updResponse" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaArchivoSoapIn">
+    <wsdl:part name="parameters" element="tns:fn_cargaArchivo" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaArchivoSoapOut">
+    <wsdl:part name="parameters" element="tns:fn_cargaArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaAcrchivo_extractorSoapIn">
+    <wsdl:part name="parameters" element="tns:fn_cargaAcrchivo_extractor" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaAcrchivo_extractorSoapOut">
+    <wsdl:part name="parameters" element="tns:fn_cargaAcrchivo_extractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaAcrchivo_proyeccionSoapIn">
+    <wsdl:part name="parameters" element="tns:fn_cargaAcrchivo_proyeccion" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaAcrchivo_proyeccionSoapOut">
+    <wsdl:part name="parameters" element="tns:fn_cargaAcrchivo_proyeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaAcrchivo_ventasSoapIn">
+    <wsdl:part name="parameters" element="tns:fn_cargaAcrchivo_ventas" />
+  </wsdl:message>
+  <wsdl:message name="fn_cargaAcrchivo_ventasSoapOut">
+    <wsdl:part name="parameters" element="tns:fn_cargaAcrchivo_ventasResponse" />
+  </wsdl:message>
+  <wsdl:message name="fn_ejectaDemonioSoapIn">
+    <wsdl:part name="parameters" element="tns:fn_ejectaDemonio" />
+  </wsdl:message>
+  <wsdl:message name="fn_ejectaDemonioSoapOut">
+    <wsdl:part name="parameters" element="tns:fn_ejectaDemonioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DigitoVerificadorEAN13SoapIn">
+    <wsdl:part name="parameters" element="tns:DigitoVerificadorEAN13" />
+  </wsdl:message>
+  <wsdl:message name="DigitoVerificadorEAN13SoapOut">
+    <wsdl:part name="parameters" element="tns:DigitoVerificadorEAN13Response" />
+  </wsdl:message>
+  <wsdl:portType name="WS_GERENTESSoap">
+    <wsdl:operation name="slt_val_Contrasenia">
+      <wsdl:input message="tns:slt_val_ContraseniaSoapIn" />
+      <wsdl:output message="tns:slt_val_ContraseniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_log">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de LOGS</wsdl:documentation>
+      <wsdl:input message="tns:slt_gn_logSoapIn" />
+      <wsdl:output message="tns:slt_gn_logSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_sociedad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de SOCIEDADES.</wsdl:documentation>
+      <wsdl:input message="tns:slt_gn_sociedadSoapIn" />
+      <wsdl:output message="tns:slt_gn_sociedadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_cen_tienda_X_sociedad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de TIENDAS.</wsdl:documentation>
+      <wsdl:input message="tns:slt_cen_tienda_X_sociedadSoapIn" />
+      <wsdl:output message="tns:slt_cen_tienda_X_sociedadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_correo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de perfiles de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_si_correoSoapIn" />
+      <wsdl:output message="tns:slt_si_correoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_evento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de perfiles de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_gn_eventoSoapIn" />
+      <wsdl:output message="tns:slt_gn_eventoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_centro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de perfiles de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_gn_centroSoapIn" />
+      <wsdl:output message="tns:slt_gn_centroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_perfil_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de perfiles de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_si_perfil_usuarioSoapIn" />
+      <wsdl:output message="tns:slt_si_perfil_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validación de Logueo.</wsdl:documentation>
+      <wsdl:input message="tns:slt_si_usuarioSoapIn" />
+      <wsdl:output message="tns:slt_si_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_logeo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validación de Logueo.</wsdl:documentation>
+      <wsdl:input message="tns:slt_logeoSoapIn" />
+      <wsdl:output message="tns:slt_logeoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_pagina_x_grupo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Páginas por perfil de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_pagina_x_grupoSoapIn" />
+      <wsdl:output message="tns:slt_pagina_x_grupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_rol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de perfiles de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_si_rolSoapIn" />
+      <wsdl:output message="tns:slt_si_rolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_pagina_x_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Páginas por perfil de usuario.</wsdl:documentation>
+      <wsdl:input message="tns:slt_pagina_x_usuarioSoapIn" />
+      <wsdl:output message="tns:slt_pagina_x_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_usr_tnd">
+      <wsdl:input message="tns:int_usr_tndSoapIn" />
+      <wsdl:output message="tns:int_usr_tndSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_correo">
+      <wsdl:input message="tns:upd_si_correoSoapIn" />
+      <wsdl:output message="tns:upd_si_correoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_si_correo">
+      <wsdl:input message="tns:int_si_correoSoapIn" />
+      <wsdl:output message="tns:int_si_correoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_gn_evento">
+      <wsdl:input message="tns:int_gn_eventoSoapIn" />
+      <wsdl:output message="tns:int_gn_eventoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_evento">
+      <wsdl:input message="tns:upd_gn_eventoSoapIn" />
+      <wsdl:output message="tns:upd_gn_eventoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_si_rol_usu">
+      <wsdl:input message="tns:int_si_rol_usuSoapIn" />
+      <wsdl:output message="tns:int_si_rol_usuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_si_menu_rol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Perchas</wsdl:documentation>
+      <wsdl:input message="tns:int_si_menu_rolSoapIn" />
+      <wsdl:output message="tns:int_si_menu_rolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_si_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert de Usuarios</wsdl:documentation>
+      <wsdl:input message="tns:int_si_usuarioSoapIn" />
+      <wsdl:output message="tns:int_si_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_contra">
+      <wsdl:input message="tns:upd_contraSoapIn" />
+      <wsdl:output message="tns:upd_contraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert de Usuarios</wsdl:documentation>
+      <wsdl:input message="tns:upd_si_usuarioSoapIn" />
+      <wsdl:output message="tns:upd_si_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dlt_gn_log">
+      <wsdl:input message="tns:dlt_gn_logSoapIn" />
+      <wsdl:output message="tns:dlt_gn_logSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dlt_usr_tnd">
+      <wsdl:input message="tns:dlt_usr_tndSoapIn" />
+      <wsdl:output message="tns:dlt_usr_tndSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_rol_usu">
+      <wsdl:input message="tns:dlt_si_rol_usuSoapIn" />
+      <wsdl:output message="tns:dlt_si_rol_usuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_menu_rol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Perchas</wsdl:documentation>
+      <wsdl:input message="tns:dlt_si_menu_rolSoapIn" />
+      <wsdl:output message="tns:dlt_si_menu_rolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rolUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta los roles de un usuario</wsdl:documentation>
+      <wsdl:input message="tns:rolUsuarioSoapIn" />
+      <wsdl:output message="tns:rolUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tiendaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta los CENTROS de un usuario</wsdl:documentation>
+      <wsdl:input message="tns:tiendaUsuarioSoapIn" />
+      <wsdl:output message="tns:tiendaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rolPagina">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de Nivel por percha.</wsdl:documentation>
+      <wsdl:input message="tns:rolPaginaSoapIn" />
+      <wsdl:output message="tns:rolPaginaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_rol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update de Roles</wsdl:documentation>
+      <wsdl:input message="tns:upd_si_rolSoapIn" />
+      <wsdl:output message="tns:upd_si_rolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_si_rol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert de Roles</wsdl:documentation>
+      <wsdl:input message="tns:int_si_rolSoapIn" />
+      <wsdl:output message="tns:int_si_rolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_si_perfil_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert de Perfiles de Usuario</wsdl:documentation>
+      <wsdl:input message="tns:int_si_perfil_usuarioSoapIn" />
+      <wsdl:output message="tns:int_si_perfil_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gn_sociedad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mantenimiento de Centros.</wsdl:documentation>
+      <wsdl:input message="tns:gn_sociedadSoapIn" />
+      <wsdl:output message="tns:gn_sociedadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gn_centro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mantenimiento de Centros.</wsdl:documentation>
+      <wsdl:input message="tns:gn_centroSoapIn" />
+      <wsdl:output message="tns:gn_centroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_perfil_usuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert de Perfiles de Usuario</wsdl:documentation>
+      <wsdl:input message="tns:upd_si_perfil_usuarioSoapIn" />
+      <wsdl:output message="tns:upd_si_perfil_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sap_consultaPedPendiente">
+      <wsdl:input message="tns:sap_consultaPedPendienteSoapIn" />
+      <wsdl:output message="tns:sap_consultaPedPendienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_promocion_sap">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Promociones</wsdl:documentation>
+      <wsdl:input message="tns:slt_promocion_sapSoapIn" />
+      <wsdl:output message="tns:slt_promocion_sapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_centros_sap">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Centros</wsdl:documentation>
+      <wsdl:input message="tns:slt_centros_sapSoapIn" />
+      <wsdl:output message="tns:slt_centros_sapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_validaUsuario">
+      <wsdl:input message="tns:slt_validaUsuarioSoapIn" />
+      <wsdl:output message="tns:slt_validaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_pronostico">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consulta de Pronósticos</wsdl:documentation>
+      <wsdl:input message="tns:slt_gn_pronosticoSoapIn" />
+      <wsdl:output message="tns:slt_gn_pronosticoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="int_gn_log">
+      <wsdl:input message="tns:int_gn_logSoapIn" />
+      <wsdl:output message="tns:int_gn_logSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_log">
+      <wsdl:input message="tns:upd_gn_logSoapIn" />
+      <wsdl:output message="tns:upd_gn_logSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_usuario">
+      <wsdl:input message="tns:dlt_si_usuarioSoapIn" />
+      <wsdl:output message="tns:dlt_si_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_parametro_upd">
+      <wsdl:input message="tns:upd_gn_parametro_updSoapIn" />
+      <wsdl:output message="tns:upd_gn_parametro_updSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaArchivo">
+      <wsdl:input message="tns:fn_cargaArchivoSoapIn" />
+      <wsdl:output message="tns:fn_cargaArchivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_extractor">
+      <wsdl:input message="tns:fn_cargaAcrchivo_extractorSoapIn" />
+      <wsdl:output message="tns:fn_cargaAcrchivo_extractorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_proyeccion">
+      <wsdl:input message="tns:fn_cargaAcrchivo_proyeccionSoapIn" />
+      <wsdl:output message="tns:fn_cargaAcrchivo_proyeccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_ventas">
+      <wsdl:input message="tns:fn_cargaAcrchivo_ventasSoapIn" />
+      <wsdl:output message="tns:fn_cargaAcrchivo_ventasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fn_ejectaDemonio">
+      <wsdl:input message="tns:fn_ejectaDemonioSoapIn" />
+      <wsdl:output message="tns:fn_ejectaDemonioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DigitoVerificadorEAN13">
+      <wsdl:input message="tns:DigitoVerificadorEAN13SoapIn" />
+      <wsdl:output message="tns:DigitoVerificadorEAN13SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_GERENTESSoap" type="tns:WS_GERENTESSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="slt_val_Contrasenia">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_val_Contrasenia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_log">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_gn_log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_sociedad">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_gn_sociedad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_cen_tienda_X_sociedad">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_cen_tienda_X_sociedad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_correo">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_si_correo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_evento">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_gn_evento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_centro">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_gn_centro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_perfil_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_si_perfil_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_si_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_logeo">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_logeo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_pagina_x_grupo">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_pagina_x_grupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_rol">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_si_rol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_pagina_x_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_pagina_x_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_usr_tnd">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_usr_tnd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_correo">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_si_correo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_correo">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_si_correo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_gn_evento">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_gn_evento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_evento">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_gn_evento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_rol_usu">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_si_rol_usu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_menu_rol">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_si_menu_rol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_si_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_contra">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_contra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_si_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_gn_log">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/dlt_gn_log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_usr_tnd">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/dlt_usr_tnd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_rol_usu">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/dlt_si_rol_usu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_menu_rol">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/dlt_si_menu_rol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolUsuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/rolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tiendaUsuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/tiendaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolPagina">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/rolPagina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_rol">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_si_rol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_rol">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_si_rol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_perfil_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_si_perfil_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gn_sociedad">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/gn_sociedad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gn_centro">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/gn_centro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_perfil_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_si_perfil_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sap_consultaPedPendiente">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/sap_consultaPedPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_promocion_sap">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_promocion_sap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_centros_sap">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_centros_sap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_validaUsuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_validaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_pronostico">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/slt_gn_pronostico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_gn_log">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/int_gn_log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_log">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_gn_log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_usuario">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/dlt_si_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_parametro_upd">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/upd_gn_parametro_upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaArchivo">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/fn_cargaArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_extractor">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/fn_cargaAcrchivo_extractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_proyeccion">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/fn_cargaAcrchivo_proyeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_ventas">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/fn_cargaAcrchivo_ventas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_ejectaDemonio">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/fn_ejectaDemonio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DigitoVerificadorEAN13">
+      <soap:operation soapAction="http://localhost/WS_GERENTES/DigitoVerificadorEAN13" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_GERENTESSoap12" type="tns:WS_GERENTESSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="slt_val_Contrasenia">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_val_Contrasenia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_log">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_gn_log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_sociedad">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_gn_sociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_cen_tienda_X_sociedad">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_cen_tienda_X_sociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_correo">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_si_correo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_evento">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_gn_evento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_centro">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_gn_centro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_perfil_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_si_perfil_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_si_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_logeo">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_logeo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_pagina_x_grupo">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_pagina_x_grupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_si_rol">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_si_rol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_pagina_x_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_pagina_x_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_usr_tnd">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_usr_tnd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_correo">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_si_correo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_correo">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_si_correo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_gn_evento">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_gn_evento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_evento">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_gn_evento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_rol_usu">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_si_rol_usu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_menu_rol">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_si_menu_rol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_si_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_contra">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_contra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_si_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_gn_log">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/dlt_gn_log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_usr_tnd">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/dlt_usr_tnd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_rol_usu">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/dlt_si_rol_usu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_menu_rol">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/dlt_si_menu_rol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolUsuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/rolUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tiendaUsuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/tiendaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolPagina">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/rolPagina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_rol">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_si_rol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_rol">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_si_rol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_si_perfil_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_si_perfil_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gn_sociedad">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/gn_sociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gn_centro">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/gn_centro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_si_perfil_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_si_perfil_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sap_consultaPedPendiente">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/sap_consultaPedPendiente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_promocion_sap">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_promocion_sap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_centros_sap">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_centros_sap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_validaUsuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_validaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="slt_gn_pronostico">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/slt_gn_pronostico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="int_gn_log">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/int_gn_log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_log">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_gn_log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dlt_si_usuario">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/dlt_si_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_gn_parametro_upd">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/upd_gn_parametro_upd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaArchivo">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/fn_cargaArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_extractor">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/fn_cargaAcrchivo_extractor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_proyeccion">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/fn_cargaAcrchivo_proyeccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_cargaAcrchivo_ventas">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/fn_cargaAcrchivo_ventas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fn_ejectaDemonio">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/fn_ejectaDemonio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DigitoVerificadorEAN13">
+      <soap12:operation soapAction="http://localhost/WS_GERENTES/DigitoVerificadorEAN13" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_GERENTES">
+    <wsdl:port name="WS_GERENTESSoap" binding="tns:WS_GERENTESSoap">
+      <soap:address location="http://localhost:53160/WS_GERENTES.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_GERENTESSoap12" binding="tns:WS_GERENTESSoap12">
+      <soap12:address location="http://localhost:53160/WS_GERENTES.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

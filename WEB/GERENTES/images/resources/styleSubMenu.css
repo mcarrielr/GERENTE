@@ -1,0 +1,67 @@
+/*
+    Document   : styleMenu
+    Created on : 08/10/2010, 09:05:31 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root {
+    display: block;
+}
+
+body {
+    font: Verdana, Geneva, sans-serif;
+    background-image:url(fnd_det_menu.jpg);
+    background-repeat:repeat-y;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+td{
+    border-left: groove;
+    border-left-color: #94A5B5;
+    border-right: groove;
+    border-right-color: #94A5B5;
+    cursor: pointer;
+    text-align:center;
+    font: Verdana, Geneva, sans-serif;
+    font-size:14px;
+    border-bottom:hidden;
+    background-image:url(fnd_boton.jpg);
+    height:25px;
+}
+
+a {
+    color:#5B6F7D;
+    font-family:Verdana, Geneva, sans-serif;
+    text-decoration:none;
+}
+
+#Titulo {
+    background-image:url(fnd_titulo.jpg);
+    font: Verdana, Geneva, sans-serif;
+    color:#5B6F7D;
+    font-size:16px;
+    font-weight:900;
+    cursor: auto;
+    height:35px;
+    border:hidden;
+}
+#Linea {
+    background-image:url(fnd_linea.jpg);
+    height:15px;
+    border:hidden;
+}
+#Espacio {
+    background-image:url(fnd_espacio.jpg);
+    height:15px;
+    border:hidden;
+}
